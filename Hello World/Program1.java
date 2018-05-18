@@ -7,7 +7,7 @@
 import lejos.nxt.Button;
 
 import lejos.nxt.*;
-public class Motors
+public class Program1
 {
     
     public static void main( String[] args )
