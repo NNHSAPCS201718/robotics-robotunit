@@ -21,11 +21,11 @@ public class Program2
         Motor.A.stop();
         System.out.println(Motor.A.getTachoCount());
         Motor.A.backward();
-        if(Motor.A.getTachoCount() == 0)
+        while(Motor.A.getTachoCount() > 0)
         {
             System.out.println(Motor.A.getTachoCount());
-            Motor.A.stop();
         }
+        Motor.A.stop();
         System.out.println(Motor.A.getTachoCount());
         Button.waitForAnyPress();
     }
