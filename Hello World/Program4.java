@@ -12,16 +12,14 @@ public class Program4
     public static void main( String[] args )
     {
         System.out.println( "Program 4" );
-        Motor.A.rotate(-1440);
-        while(Motor.A.isMoving())
+        while(Motor.A.getTachoCount() >= -1440 && Button.ENTER.isPressed() == false)
         {
             System.out.println(Motor.A.getTachoCount());
-            if(Button.ENTER.isPressed())
-            {
-              Motor.A.stop();  
-            }
+            Motor.A.backward();
         }
+        Motor.A.stop();  
         System.out.println(Motor.A.getTachoCount());
+        Button.waitForAnyPress();
         Button.waitForAnyPress();
     }
 }
